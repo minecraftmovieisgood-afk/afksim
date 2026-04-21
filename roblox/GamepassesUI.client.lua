@@ -16,7 +16,7 @@ local BUTTON_TEXTURE_TRANSPARENCY = 0.5
 
 local function addStroke(guiObj, thickness, color)
 	local stroke = Instance.new("UIStroke")
-	stroke.Thickness = thickness or 5
+	stroke.Thickness = thickness or 6
 	stroke.Color = color or Color3.new(0, 0, 0)
 	stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	pcall(function()
@@ -42,13 +42,13 @@ local btn = Instance.new("ImageButton")
 btn.Name = "Open2XSecondsButton"
 btn.Parent = gui
 btn.Position = UDim2.fromScale(0.855, 0.42)
-btn.Size = UDim2.fromScale(0.13, 0.085)
+btn.Size = UDim2.fromScale(0.145, 0.1)
 btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 btn.AutoButtonColor = false
 btn.Image = BUTTON_TEXTURE
 btn.ImageTransparency = BUTTON_TEXTURE_TRANSPARENCY
 btn.ScaleType = Enum.ScaleType.Stretch
-addStroke(btn, 5, Color3.new(0, 0, 0))
+addStroke(btn, 6, Color3.new(0, 0, 0))
 local btnSizeLimit = Instance.new("UISizeConstraint")
 btnSizeLimit.MaxSize = Vector2.new(360, 120)
 btnSizeLimit.Parent = btn
@@ -99,14 +99,14 @@ TweenService:Create(only9Scale, TweenInfo.new(0.45, Enum.EasingStyle.Sine, Enum.
 local placeholderBtn = Instance.new("ImageButton")
 placeholderBtn.Name = "OpenPlaceholderGamepassButton"
 placeholderBtn.Parent = gui
-placeholderBtn.Position = UDim2.fromScale(0.855, 0.52)
-placeholderBtn.Size = UDim2.fromScale(0.13, 0.085)
+placeholderBtn.Position = UDim2.fromScale(0.855, 0.535)
+placeholderBtn.Size = UDim2.fromScale(0.145, 0.1)
 placeholderBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 placeholderBtn.AutoButtonColor = false
 placeholderBtn.Image = BUTTON_TEXTURE
 placeholderBtn.ImageTransparency = BUTTON_TEXTURE_TRANSPARENCY
 placeholderBtn.ScaleType = Enum.ScaleType.Stretch
-addStroke(placeholderBtn, 5, Color3.new(0, 0, 0))
+addStroke(placeholderBtn, 6, Color3.new(0, 0, 0))
 local placeholderSizeLimit = Instance.new("UISizeConstraint")
 placeholderSizeLimit.MaxSize = Vector2.new(360, 120)
 placeholderSizeLimit.Parent = placeholderBtn

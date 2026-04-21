@@ -59,7 +59,7 @@ local function makeButton(parent, name, text, pos, size, bgColor)
 	btn.Image = BUTTON_TEXTURE
 	btn.ImageTransparency = BUTTON_TEXTURE_TRANSPARENCY
 	btn.ScaleType = Enum.ScaleType.Stretch
-	addStroke(btn, 3, Color3.new(0, 0, 0))
+	addStroke(btn, 4, Color3.new(0, 0, 0))
 	local lbl = Instance.new("TextLabel")
 	lbl.Name = "Label"
 	lbl.Parent = btn
@@ -86,9 +86,9 @@ blur.Name = "ShopBlur"
 blur.Size = 0
 blur.Parent = Lighting
 
-local openBtn = makeButton(gui, "OpenShopButton", "Shop", UDim2.fromScale(0.015, 0.50), UDim2.fromScale(0.15, 0.095), Color3.fromRGB(0, 120, 255))
+local openBtn = makeButton(gui, "OpenShopButton", "Shop", UDim2.fromScale(0.015, 0.515), UDim2.fromScale(0.155, 0.1), Color3.fromRGB(0, 120, 255))
 local openBtnStroke = openBtn:FindFirstChildOfClass("UIStroke")
-if openBtnStroke then openBtnStroke.Thickness = 5 end
+if openBtnStroke then openBtnStroke.Thickness = 6 end
 local openBtnBasePosition = openBtn.Position
 local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(-0.2, 0)
 local openBtnTween

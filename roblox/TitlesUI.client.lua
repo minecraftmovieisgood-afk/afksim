@@ -130,7 +130,7 @@ local function makeButton(parent, name, text, pos, size, bgColor)
 	btn.Image = BUTTON_TEXTURE
 	btn.ImageTransparency = BUTTON_TEXTURE_TRANSPARENCY
 	btn.ScaleType = Enum.ScaleType.Stretch
-	addStroke(btn, 3, Color3.new(0, 0, 0))
+	addStroke(btn, 4, Color3.new(0, 0, 0))
 
 	local lbl = Instance.new("TextLabel")
 	lbl.Name = "Label"
@@ -171,12 +171,12 @@ local openBtn = makeButton(
 	"OpenTitlesButton",
 	"Titles",
 	UDim2.fromScale(0.015, 0.40),
-	UDim2.fromScale(0.15, 0.095),
+	UDim2.fromScale(0.155, 0.1),
 	Color3.fromRGB(255, 0, 0)
 )
 local openBtnStroke = openBtn:FindFirstChildOfClass("UIStroke")
 if openBtnStroke then
-	openBtnStroke.Thickness = 5
+	openBtnStroke.Thickness = 6
 end
 openBtn.Visible = true
 
@@ -184,13 +184,13 @@ local autoBestSideBtn = makeButton(
 	gui,
 	"AutoBestTimeSideButton",
 	"Auto Time: OFF",
-	UDim2.fromScale(0.015, 0.70),
-	UDim2.fromScale(0.15, 0.075),
+	UDim2.fromScale(0.015, 0.745),
+	UDim2.fromScale(0.155, 0.085),
 	Color3.fromRGB(170, 35, 35)
 )
 local autoBestStroke = autoBestSideBtn:FindFirstChildOfClass("UIStroke")
 if autoBestStroke then
-	autoBestStroke.Thickness = 5
+	autoBestStroke.Thickness = 6
 end
 
 local openBtnBasePosition = openBtn.Position

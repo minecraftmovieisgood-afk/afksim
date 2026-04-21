@@ -76,7 +76,7 @@ local function makeButton(parent, name, text, pos, size, bgColor)
 	btn.Image = BUTTON_TEXTURE
 	btn.ImageTransparency = BUTTON_TEXTURE_TRANSPARENCY
 	btn.ScaleType = Enum.ScaleType.Stretch
-	addStroke(btn, 3, Color3.new(0, 0, 0))
+	addStroke(btn, 4, Color3.new(0, 0, 0))
 
 	local lbl = Instance.new("TextLabel")
 	lbl.Name = "Label"
@@ -112,13 +112,13 @@ local openBtn = makeButton(
 	gui,
 	"OpenDonateButton",
 	"Donate",
-	UDim2.fromScale(0.015, 0.60),
-	UDim2.fromScale(0.15, 0.095),
+	UDim2.fromScale(0.015, 0.63),
+	UDim2.fromScale(0.155, 0.1),
 	Color3.fromRGB(140, 25, 180)
 )
 local openBtnStroke = openBtn:FindFirstChildOfClass("UIStroke")
 if openBtnStroke then
-	openBtnStroke.Thickness = 5
+	openBtnStroke.Thickness = 6
 end
 openBtn.Visible = true
 local openBtnBasePosition = openBtn.Position
