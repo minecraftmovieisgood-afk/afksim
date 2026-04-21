@@ -20,6 +20,11 @@ if not autoBestTimeEvent then
 	autoBestTimeEvent.Parent = ReplicatedStorage
 end
 
+-- Add/remove user IDs here for the "A Cool Person" title.
+local COOL_PERSON_USER_IDS = {
+	3653999284,
+}
+
 local TITLES = {
 	{Id = "None", Name = "None", Required = 0, Description = "The Default Title"},
 	{Id = "IdleBeginner", Name = "Time Newbie", Required = 60, Description = "First tiny step into the clockwork."},
@@ -53,6 +58,7 @@ local TITLES = {
 	{Id = "PackNebula", Name = "Nebula Core", Required = 0, Description = "From Title Packs (Rare).", RequiresPackTitle = "PackNebula"},
 	{Id = "PackCelestial", Name = "Celestial Crown", Required = 0, Description = "From Title Packs (Epic).", RequiresPackTitle = "PackCelestial"},
 	{Id = "PackSingularity", Name = "GOD", Required = 0, Description = "From Title Packs (0.1% GOD drop).", RequiresPackTitle = "PackSingularity"},
+	{Id = "CoolPerson", Name = "A Cool Person", Required = 0, Description = "Special title granted to selected user IDs.", AllowedUserIds = COOL_PERSON_USER_IDS},
 	{Id = "Owner", Name = "Owner", Required = 0, Description = "Exclusive title for the game owner.", AllowedUserIds = {3653999284}},
 }
 

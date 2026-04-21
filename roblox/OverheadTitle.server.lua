@@ -36,6 +36,7 @@ local TITLE_COLORS = {
 	["Nebula Core"] = Color3.fromRGB(200, 170, 255),
 	["Celestial Crown"] = Color3.fromRGB(255, 210, 120),
 	["GOD"] = Color3.fromRGB(255, 245, 120),
+	["A Cool Person"] = Color3.fromRGB(210, 180, 140),
 	["Donater"] = Color3.fromRGB(255, 210, 90),
 	["Disco"] = Color3.fromRGB(255, 90, 90),
 	["Owner"] = Color3.fromRGB(210, 210, 210),

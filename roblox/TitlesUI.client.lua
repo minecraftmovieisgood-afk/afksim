@@ -14,6 +14,9 @@ local UI_ID = "Titles"
 local FONT = Enum.Font.FredokaOne
 local BUTTON_TEXTURE = "rbxassetid://18878365966"
 local BUTTON_TEXTURE_TRANSPARENCY = 0.5
+local COOL_PERSON_USER_IDS = {
+	3653999284,
+}
 
 local TITLES = {
 	{Id = "None", Name = "None", Required = 0, Description = "The Default Title", IsAFK = true, Color = Color3.fromRGB(230, 230, 230)},
@@ -48,6 +51,7 @@ local TITLES = {
 	{Id = "PackNebula", Name = "Nebula Core", Required = 0, Description = "From Title Packs (Rare).", IsAFK = false, RequiresPackTitle = "PackNebula", Color = Color3.fromRGB(200, 170, 255)},
 	{Id = "PackCelestial", Name = "Celestial Crown", Required = 0, Description = "From Title Packs (Epic).", IsAFK = false, RequiresPackTitle = "PackCelestial", Color = Color3.fromRGB(255, 210, 120)},
 	{Id = "PackSingularity", Name = "GOD", Required = 0, Description = "From Title Packs (0.1% GOD drop).", IsAFK = false, RequiresPackTitle = "PackSingularity", Color = Color3.fromRGB(255, 245, 120)},
+	{Id = "CoolPerson", Name = "A Cool Person", Required = 0, Description = "Special title granted to selected user IDs.", IsAFK = false, AllowedUserIds = COOL_PERSON_USER_IDS, Color = Color3.fromRGB(210, 180, 140)},
 	{Id = "Owner", Name = "Owner", Required = 0, Description = "Exclusive title for the game owner.", IsAFK = false, AllowedUserIds = {3653999284}, Color = Color3.fromRGB(210, 210, 210)},
 }
 
@@ -166,9 +170,9 @@ local openBtn = makeButton(
 	gui,
 	"OpenTitlesButton",
 	"Titles",
-	UDim2.fromScale(0.015, 0.40),
-	UDim2.fromScale(0.13, 0.085),
-	Color3.fromRGB(255, 0, 0)
+	UDim2.fromScale(0.04, 0.04),
+	UDim2.fromScale(0.28, 0.11),
+	Color3.fromRGB(175, 175, 175)
 )
 local openBtnStroke = openBtn:FindFirstChildOfClass("UIStroke")
 if openBtnStroke then
@@ -180,9 +184,9 @@ local autoBestSideBtn = makeButton(
 	gui,
 	"AutoBestTimeSideButton",
 	"Auto Time: OFF",
-	UDim2.fromScale(0.015, 0.70),
-	UDim2.fromScale(0.13, 0.07),
-	Color3.fromRGB(120, 40, 40)
+	UDim2.fromScale(0.52, 0.17),
+	UDim2.fromScale(0.18, 0.08),
+	Color3.fromRGB(170, 35, 35)
 )
 local autoBestStroke = autoBestSideBtn:FindFirstChildOfClass("UIStroke")
 if autoBestStroke then
@@ -190,10 +194,10 @@ if autoBestStroke then
 end
 
 local openBtnBasePosition = openBtn.Position
-local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(-0.2, 0)
+local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(0, -0.2)
 local openBtnTween
 local autoBtnBasePosition = autoBestSideBtn.Position
-local autoBtnHiddenPosition = autoBtnBasePosition + UDim2.fromScale(-0.2, 0)
+local autoBtnHiddenPosition = autoBtnBasePosition + UDim2.fromScale(0, -0.2)
 local autoBtnTween
 
 local function tweenOpenButton(shouldShow)

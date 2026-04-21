@@ -108,14 +108,13 @@ if not blur then
 	blur.Parent = Lighting
 end
 
--- Positioned under the Titles button on the left side.
 local openBtn = makeButton(
 	gui,
 	"OpenDonateButton",
 	"Donate",
-	UDim2.fromScale(0.015, 0.60),
-	UDim2.fromScale(0.13, 0.085),
-	Color3.fromRGB(140, 25, 180)
+	UDim2.fromScale(0.66, 0.04),
+	UDim2.fromScale(0.28, 0.11),
+	Color3.fromRGB(185, 185, 0)
 )
 local openBtnStroke = openBtn:FindFirstChildOfClass("UIStroke")
 if openBtnStroke then
@@ -123,7 +122,7 @@ if openBtnStroke then
 end
 openBtn.Visible = true
 local openBtnBasePosition = openBtn.Position
-local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(-0.2, 0)
+local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(0, -0.2)
 local openBtnTween
 
 local function tweenOpenButton(shouldShow)

@@ -86,11 +86,11 @@ blur.Name = "ShopBlur"
 blur.Size = 0
 blur.Parent = Lighting
 
-local openBtn = makeButton(gui, "OpenShopButton", "Shop", UDim2.fromScale(0.015, 0.50), UDim2.fromScale(0.13, 0.085), Color3.fromRGB(0, 120, 255))
+local openBtn = makeButton(gui, "OpenShopButton", "Shop", UDim2.fromScale(0.35, 0.04), UDim2.fromScale(0.28, 0.11), Color3.fromRGB(0, 170, 0))
 local openBtnStroke = openBtn:FindFirstChildOfClass("UIStroke")
 if openBtnStroke then openBtnStroke.Thickness = 5 end
 local openBtnBasePosition = openBtn.Position
-local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(-0.2, 0)
+local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(0, -0.2)
 local openBtnTween
 
 local function tweenOpenButton(shouldShow)
