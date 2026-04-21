@@ -170,9 +170,9 @@ local openBtn = makeButton(
 	gui,
 	"OpenTitlesButton",
 	"Titles",
-	UDim2.fromScale(0.04, 0.04),
-	UDim2.fromScale(0.28, 0.11),
-	Color3.fromRGB(175, 175, 175)
+	UDim2.fromScale(0.015, 0.40),
+	UDim2.fromScale(0.15, 0.095),
+	Color3.fromRGB(255, 0, 0)
 )
 local openBtnStroke = openBtn:FindFirstChildOfClass("UIStroke")
 if openBtnStroke then
@@ -184,8 +184,8 @@ local autoBestSideBtn = makeButton(
 	gui,
 	"AutoBestTimeSideButton",
 	"Auto Time: OFF",
-	UDim2.fromScale(0.52, 0.17),
-	UDim2.fromScale(0.18, 0.08),
+	UDim2.fromScale(0.015, 0.70),
+	UDim2.fromScale(0.15, 0.075),
 	Color3.fromRGB(170, 35, 35)
 )
 local autoBestStroke = autoBestSideBtn:FindFirstChildOfClass("UIStroke")
@@ -194,10 +194,10 @@ if autoBestStroke then
 end
 
 local openBtnBasePosition = openBtn.Position
-local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(0, -0.2)
+local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(-0.2, 0)
 local openBtnTween
 local autoBtnBasePosition = autoBestSideBtn.Position
-local autoBtnHiddenPosition = autoBtnBasePosition + UDim2.fromScale(0, -0.2)
+local autoBtnHiddenPosition = autoBtnBasePosition + UDim2.fromScale(-0.2, 0)
 local autoBtnTween
 
 local function tweenOpenButton(shouldShow)

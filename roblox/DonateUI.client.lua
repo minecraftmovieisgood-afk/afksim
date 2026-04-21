@@ -112,9 +112,9 @@ local openBtn = makeButton(
 	gui,
 	"OpenDonateButton",
 	"Donate",
-	UDim2.fromScale(0.66, 0.04),
-	UDim2.fromScale(0.28, 0.11),
-	Color3.fromRGB(185, 185, 0)
+	UDim2.fromScale(0.015, 0.60),
+	UDim2.fromScale(0.15, 0.095),
+	Color3.fromRGB(140, 25, 180)
 )
 local openBtnStroke = openBtn:FindFirstChildOfClass("UIStroke")
 if openBtnStroke then
@@ -122,7 +122,7 @@ if openBtnStroke then
 end
 openBtn.Visible = true
 local openBtnBasePosition = openBtn.Position
-local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(0, -0.2)
+local openBtnHiddenPosition = openBtnBasePosition + UDim2.fromScale(-0.2, 0)
 local openBtnTween
 
 local function tweenOpenButton(shouldShow)
